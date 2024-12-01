@@ -1,0 +1,7 @@
+check=$(grep -o "<Prerelease>.*</Prerelease>" /home/user/build.xml | cut -d ">" -f 2 | cut -d "<" -f 1)
+echo $check
+if[$check=="false"] then
+echo "it is release build"
+else
+echo "it is not release build"
+fi
